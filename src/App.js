@@ -9,7 +9,7 @@ export default function App() {
       <Weather />
       <footer>
         This project coded by 
-<a href="https://github.com/lenaMarilena"> Olena Ovcharenko </a>
+<a href="https://github.com/lenaMarilena/ReactHomework1"> Olena Ovcharenko </a>
 </footer>
 </div>
 </div>
