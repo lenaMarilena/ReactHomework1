@@ -1,54 +1,65 @@
-.Weather {
-  font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid #dadde1;
-    color: rgb(135, 135, 135);
-    padding: 16px;
-    border-radius: 4px;
-    max-width: 600px;
-  }
-
-  .Weather h1 {
-    color: #878787;
-    font-size: 24px;
-    font-weight: 100;
-    margin: 20px 0 0 0;
-    line-height: 28px;
-  }
-
-  .Weather li {
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 19px;
-  list-style: none;
+.container-main {
+  margin: 8% auto;
+  max-width: 600px;
+  font-family: "Titillium Web", sans-serif;
 }
 
-.Weather ul {
-  margin: 0;
-  padding: 0;
-
+.top-item {
+  background-image: linear-gradient(
+    90deg,
+    #1e3249 0%,
+    #3e76be 45%,
+    rgb(236, 231, 231) 100%
+  );
+  color: #fff;
 }
 
-.Weather img {
-  margin-right: 10px;
-  margin-bottom: 28px;
-  height: 64px;
-  width: 64px;
-  display: inline-block;
-
-}
-.Weather .temperature {
- font-size: 64px;
- color: rgb(33, 33, 33);
- line-height: 64px;
- font-weight: 400;
+.main-temp {
+  font-size: 50px;
+  font-weight: 600;
 }
 
-.Weather .unit {
-  color: rgb(33, 33, 33);
- font-size: 16px;
- font-weight: 400;
- position: relative;
- top: -34px;
- margin-left: 5px;
- line-height: 1;
+.units {
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.units a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.units .active {
+  color: rgba(255, 255, 255, 0.432);
+  cursor: default;
+  text-decoration: none;
+}
+
+.units span {
+  position: relative;
+  font-size: 25px;
+  font-weight: 200;
+  top: -2px;
+}
+
+#description {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.conditions {
+  font-size: 13px;
+}
+
+.conditions span:nth-child(3) {
+  font-weight: 550;
+}
+.humidity {
+  border-right: 1.5px solid #fff;
+  padding-right: 19px;
+}
+
+.main-city {
+  font-size: 40px;
 }

@@ -42,3 +42,23 @@
     transform: rotate(360deg);
   }
 }
+.search-form {
+  padding-top: 10px;
+}
+.weather-forecast-day {
+  font-weight: 600;
+}
+
+.weather-icon {
+  width: 30px;
+  line-height: 4;
+}
+
+.weather-forecast-temperatures {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.8;
+}

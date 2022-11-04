@@ -1,51 +1,88 @@
-import React from "react";
+import React, { useState } from "react";
+import WeatherInfo from "./WeatherInfo";
+import Cities from "./Cities";
+import Forecast from "./Forecast";
 import axios from "axios";
+
 import "./Weather.css";
 
-export default function Weather() {
-function handleResponse(response) { 
+export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
+  function handleResponse(response) {
+    setWeatherData({
+      ready: true,
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      city: response.data.name,
+      date: new Date(response.data.dt * 1000),
+      icon: response.data.weather[0].icon,
+    });
+  }
 
-}
-    const apiKey = "48ce22c0123c292b5b6d36e5ddd78fb4";
-    let city = "Berlin";
-    let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(handleResponse);
+  function search() {
+    let apiKey = "ca3de197620a1521a455c4239b865368";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    search(city);
+    // search for a city
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  if (weatherData.ready) {
     return (
-    <div className="Weather">
-        <form>
-            <div className="row">
-                <div className="col-9">
-            <input type="search" placeholder="Enter a city..." className="form-control" autoFocus="on"/></div>
-            <div className="col-3">
-            <input type="submit" value="Search" className="btn btn-primary w-100"/> 
+      <div className="weather">
+        <WeatherInfo data={weatherData} />
+        <div className="bottom-item shadow-lg rounded-3 px-4 py-3">
+          <div className="row">
+            <Cities />
+            <div className="col-10" id="forecast">
+              <Forecast />
             </div>
-             </div>
-        </form>
-       <h1>Madrid</h1> 
-        <ul>
-<li>Wednesday 7:00</li>
-<li>Mostly Cloudy</li>
-        </ul>
-<div className="row mt-3">
-    <div className="col-6">
-        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="mostly cloudy"
-        />
-<span className="temperature">25</span><span className="unit">°C</span>
-    </div>
-    <div className="col-6">
-        <ul>
-            <li>
-                Precipitation: 15%
-            </li>
-            <li>
-                Humidity: 75%
-            </li>
-            <li>
-                Wind: 13 km/h
-            </li>
-        </ul>
-    </div>
-</div>
-</div>
-)
+          </div>
+          <div className="col-sm-12 search-form">
+            <form className="row" id="city-form" onSubmit={handleSubmit}>
+              <div className="mb-3 col-sm-8 ">
+                <input
+                  type="search"
+                  placeholder="Enter a city"
+                  className="form-control"
+                  id="city-input"
+                  autoFocus="on"
+                  onChange={handleCityChange}
+                />
+              </div>
+              <div className="col-md-4 button">
+                <button
+                  type="submit"
+                  id="search-btn"
+                  className="btn btn-outline-warning"
+                >
+                  Search
+                </button>
+                <button
+                  type="submit"
+                  id="current-btn"
+                  className="btn btn-outline-warning"
+                >
+                  Current
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    );
+  } else {
+    search();
+    return <p>Loading ..</p>;
+  }
 }
