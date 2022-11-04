@@ -68,13 +68,6 @@ export default function Weather(props) {
                 >
                   Search
                 </button>
-                <button
-                  type="submit"
-                  id="current-btn"
-                  className="btn btn-outline-warning"
-                >
-                  Current
-                </button>
               </div>
             </form>
           </div>

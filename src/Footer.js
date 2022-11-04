@@ -15,7 +15,7 @@ export default function Footer() {
       </a>{" "}
       and{" "}
       <a
-        href="https://github.com/lenaMarilena"
+        href="https://fancy-fairy-a4a57b.netlify.app/"
         target="_blank"
         rel="noopener noreferrer"
         className="source-link"
