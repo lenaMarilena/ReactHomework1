@@ -1,5 +1,5 @@
 body {
-  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/993/original/sky.jpg?1657454006);
+  background: linear-gradient(to top, #fff1eb 0%, #8dc2db 100%);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
