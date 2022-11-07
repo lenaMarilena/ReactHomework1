@@ -40,7 +40,7 @@ export default function Weather(props) {
    }
    
    function currentLocation(location) {
-    let apiKey = "ca3de197620a1521a455c4239b865368";
+    let apiKey = "515c9ddbeb3cda9061acfab71031839e";
      let lat = location.coords.latitude;
      let lon = location.coords.longitude;
      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
@@ -55,20 +55,25 @@ export default function Weather(props) {
    // popular cities
 
     function showKyiv() {
-      let apiKey = "ca3de197620a1521a455c4239b865368";
+      let apiKey = "515c9ddbeb3cda9061acfab71031839e";
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Kyiv&units=metric&appid=${apiKey}`;
       axios.get(apiUrl).then(handleResponse);
    }
    function showLondon() {
-     let apiKey = "ca3de197620a1521a455c4239b865368";
+     let apiKey = "515c9ddbeb3cda9061acfab71031839e";
      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${apiKey}`;
      axios.get(apiUrl).then(handleResponse);
    }
    function showMadrid() {
-     let apiKey = "ca3de197620a1521a455c4239b865368";
+     let apiKey = "515c9ddbeb3cda9061acfab71031839e";
      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Madrid&units=metric&appid=${apiKey}`;
      axios.get(apiUrl).then(handleResponse);
    }
+   function showLisbon() {
+    let apiKey = "515c9ddbeb3cda9061acfab71031839e";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Lisbon&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
 
    
   if (weatherData.ready) {
@@ -82,11 +87,14 @@ export default function Weather(props) {
                 <li id="kyiv" onClick={showKyiv}>
                   Kyiv
                 </li>
-                <li id="london" onClick={showLondon}>
-                  London
-                </li>
                 <li id="madrid" onClick={showMadrid}>
                   Madrid
+                </li>
+                 <li id="london" onClick={showLondon}>
+                  London
+                </li>
+                <li id="lisbon" onClick={showLisbon}>
+                  Lisbon
                 </li>
               </ul>
             </div>
