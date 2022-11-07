@@ -63,5 +63,6 @@ body {
   .button {
     display: flex;
     justify-content: center;
+    color: #8dc2db;
   }
 }
