@@ -3,14 +3,14 @@
   }
   
   .cities {
-    font-weight: 600;
+    font-weight: 900;
     list-style-type: none;
     padding-left: 0;
     cursor: pointer;
   }
   
   li:hover {
-    font-weight: 700;
+    font-weight: 900;
   }
   
   .line-vertical {

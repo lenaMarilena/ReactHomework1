@@ -1,7 +1,7 @@
 .container-main {
   margin: 8% auto;
   max-width: 600px;
-  font-family: "Titillium Web", sans-serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .top-item {
@@ -44,7 +44,7 @@
 }
 
 #description {
-  font-size: 20px;
+  font-size: 24px;
   padding-bottom: 10px;
 }
 
@@ -61,13 +61,13 @@
 }
 
 .main-city {
-  font-size: 40px;
+  font-size: 60px;
 }
 
 /* Cities */
 
 .bottom-item {
-  color: #09127f;
+  color: #0c178b;
 }
 
 .cities {
@@ -82,5 +82,10 @@ li:hover {
 }
 
 .line-vertical {
-  margin: 10px 0;
+  margin: 30px 0;
+}
+
+img {
+min-width: 60px;
+margin: 1px;
 }
