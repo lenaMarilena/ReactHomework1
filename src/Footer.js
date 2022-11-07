@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="col-12 p-2 text-center bottom-item">
       <a
-        href="https://github.com/lenaMarilenahttps://github.com/lenaMarilena/ReactHomework1"
+        href="https://github.com/lenaMarilena/ReactHomework1"
         target="_blank"
         rel="noopener noreferrer"
         className="source-link"
