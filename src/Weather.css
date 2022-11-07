@@ -7,9 +7,9 @@
 .top-item {
   background-image: linear-gradient(
     90deg,
-    #315175 2%,
-    #3e76be 43%,
-    rgb(210, 235, 238) 110%
+    #1e3249 0%,
+    #3e76be 45%,
+    rgb(236, 231, 231) 100%
   );
   color: #fff;
 }
@@ -64,7 +64,23 @@
   font-size: 40px;
 }
 
-.btn  {
-  background-color: rgb(253, 238, 25);
-color: black;
+/* Cities */
+
+.bottom-item {
+  color: #09127f;
+}
+
+.cities {
+  font-weight: 600;
+  list-style-type: none;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+li:hover {
+  font-weight: 700;
+}
+
+.line-vertical {
+  margin: 10px 0;
 }
