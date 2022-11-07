@@ -110,14 +110,14 @@ export default function Weather(props) {
                 <button
                   type="submit"
                   id="search-btn"
-                  className="btn btn-outline-warning"
+                  className="btn btn-outline-info"
                 >
                   Search
                 </button>
                 <button
                   type="submit"
                   id="current-btn"
-                  className="btn btn-outline-warning"
+                  className="btn btn-outline-info"
                   onClick={showCurrentLocation}
                 >
                   Current
